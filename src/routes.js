@@ -1,12 +1,8 @@
 const routes = [
   {
     path: '/',
-    component: 'pages/Home'
+    component: 'pages/Home/Home'
   },
-  {
-    path: '/about',
-    component: 'pages/About'
-  }
 ];
 
 const generateRoutes = function() {

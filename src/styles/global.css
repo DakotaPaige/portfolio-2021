@@ -1,11 +1,5 @@
 /* Global styles to inject at the beginning in the app. This should include any resets and @font-faces */
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('/assets/fonts/Roboto-Regular.woff2') format('woff2'),
-    url('/assets/fonts/Roboto-Regular.woff') format('woff');
-}
-
 * {
   box-sizing: border-box;
   margin: 0;

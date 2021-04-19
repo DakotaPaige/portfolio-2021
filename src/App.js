@@ -6,8 +6,6 @@ import { hot } from 'react-hot-loader';
 
 import routes from 'src/routes';
 
-import Header from 'components/Header';
-
 const App = () => {
   const generateRoutes = () => {
     return routes.map((route, index) => {
@@ -21,7 +19,6 @@ const App = () => {
     <Route
       render={({ location }) => (
         <Root>
-          <Header />
           <TransitionGroup>
             <CSSTransition key={location.key} timeout={500} classNames="fade">
               <Switch location={location}>{generateRoutes()}</Switch>

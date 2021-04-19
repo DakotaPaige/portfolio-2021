@@ -4,7 +4,7 @@ module.exports = {
     gtmId: ''
   },
   seo: {
-    title: ''
+    title: 'Dakota Mauza Portfolio'
   },
   stage: {
     mobile: 320,
