@@ -6,13 +6,13 @@ import { vw, vwTablet, vwDesktop } from 'src/styles/utils';
 import media from 'src/styles/media';
 
 const Project = (props) => {
-  const { project } = props;
+  const { project, handleClick } = props;
   return (
-    <Root image={project.heroImage}>
-      <div className='overlay'/>
+    <Root image={project.heroImage} onClick={handleClick}>
+      <div className="overlay" />
       <Wrapper>
         <h3>{project.title}</h3>
-        <div className='overflow'>
+        <div className="overflow">
           <p>{project.description}</p>
         </div>
       </Wrapper>
@@ -22,12 +22,19 @@ const Project = (props) => {
 
 Project.propTypes = {
   project: PropTypes.object,
-}
+  handleClick: PropTypes.func,
+};
 
 const Root = styled.div`
   width: 100%;
   height: ${vw(200)};
-  background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 53%, rgba(0,0,0,1) 100%), url(${props => props.image});
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 53%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(${(props) => props.image});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -42,15 +49,20 @@ const Root = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 53%, rgba(0,0,0,0.6) 100%);
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 53%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
     opacity: 0;
-    transition: ${({theme}) => theme.transition};
+    transition: ${({ theme }) => theme.transition};
   }
   .overflow {
     display: none;
   }
   h3 {
-    color: ${({theme}) => theme.color.lightGrey};
+    color: ${({ theme }) => theme.color.lightGrey};
   }
   @media ${media.tablet} {
     width: ${vwTablet(339)};
@@ -71,10 +83,10 @@ const Root = styled.div`
       .overflow {
         max-height: ${vwDesktop(150)};
       }
-    } 
+    }
     .overflow {
       display: block;
-      transition: ${({theme}) => theme.transition};
+      transition: ${({ theme }) => theme.transition};
       overflow: hidden;
       max-height: 0;
     }
@@ -82,10 +94,10 @@ const Root = styled.div`
       margin-bottom: ${vwDesktop(10)};
     }
     p {
-      color: ${({theme}) => theme.color.lightGrey};
+      color: ${({ theme }) => theme.color.lightGrey};
     }
   }
-`; 
+`;
 
 const Wrapper = styled.div`
   position: relative;

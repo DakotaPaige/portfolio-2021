@@ -8,14 +8,14 @@ import { vw, vwTablet, vwDesktop } from 'src/styles/utils';
 import media from 'src/styles/media';
 
 const FeaturedProject = (props) => {
-  const { project, index } = props;
+  const { project, index, handleClick } = props;
   return (
     <Root index={index}>
       <Image src={project.heroImage} alt={project.title} />
       <Wrapper>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-        <Button text="View Project" />
+        <Button text="View Project" handleClick={handleClick} />
       </Wrapper>
     </Root>
   );
@@ -24,7 +24,8 @@ const FeaturedProject = (props) => {
 FeaturedProject.propTypes = {
   project: PropTypes.object,
   index: PropTypes.number,
-}
+  handleClick: PropTypes.func,
+};
 
 const Root = styled.div`
   margin-bottom: ${vw(40)};
@@ -34,10 +35,10 @@ const Root = styled.div`
     align-items: center;
     margin-bottom: ${vwTablet(40)};
     img {
-      order: ${props => props.index % 2 === 0 ? 1 : 2};
+      order: ${(props) => (props.index % 2 === 0 ? 1 : 2)};
     }
-    > div{
-      order: ${props => props.index % 2 === 0 ? 2 : 1};
+    > div {
+      order: ${(props) => (props.index % 2 === 0 ? 2 : 1)};
     }
   }
   @media ${media.desktop} {

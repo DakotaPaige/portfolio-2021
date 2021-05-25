@@ -16,7 +16,7 @@ export default createGlobalStyle`
     border: none;
     background: transparent;
     text-decoration: none;
-    color: ${theme.color.primary};
+    color: ${theme.color.darkGrey};
   }
 
   main {
@@ -24,6 +24,10 @@ export default createGlobalStyle`
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .grey {
+    color: ${theme.color.lightGrey};
   }
 
   h1 {
@@ -85,6 +89,19 @@ export default createGlobalStyle`
       font-size: ${vwDesktop(18)};
       letter-spacing: ${vwDesktop(1.2)};
     }
+    &.scroll {
+      font-size: ${vw(12)};
+      letter-spacing: ${vw(1)};
+      text-transform: uppercase;
+      @media ${media.tablet} {
+        font-size: ${vwTablet(14)};
+        letter-spacing: ${vwTablet(1.3)};
+      }
+      @media ${media.desktop} {
+        font-size: ${vwDesktop(14)};
+        letter-spacing: ${vwDesktop(1.3)};
+      }
+    }
   }
 
   .button {
@@ -93,6 +110,51 @@ export default createGlobalStyle`
     line-height: 1.2;
     letter-spacing: ${vw(1.2)};
     text-transform: uppercase;
+    @media ${media.tablet} {
+      font-size: ${vwTablet(16)};
+      letter-spacing: ${vwTablet(1)};
+    }
+    @media ${media.desktop} {
+      font-size: ${vwDesktop(18)};
+      letter-spacing: ${vwDesktop(1.2)};
+    }
+  }
+
+  .form-label {
+    font-size: ${vw(12)};
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: ${vw(1.2)};
+    text-transform: uppercase;
+    transition: 0.4s ease;
+    &.active {
+      font-size: ${vw(8)};
+      letter-spacing: ${vw(1)};
+    }
+    @media ${media.tablet} {
+      font-size: ${vwTablet(16)};
+      letter-spacing: ${vwTablet(1)};
+      &.active {
+        font-size: ${vwTablet(12)};
+        letter-spacing: ${vwTablet(0.8)};
+      }
+    }
+    @media ${media.desktop} {
+      font-size: ${vwDesktop(18)};
+      letter-spacing: ${vwDesktop(1.2)};
+      &.active {
+        font-size: ${vwDesktop(14)};
+        letter-spacing: ${vwDesktop(1)};
+      }
+    }
+  }
+
+  .form-input {
+    font-family: ${theme.font.family};
+    font-size: ${vw(12)};
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: ${vw(0.5)};
     @media ${media.tablet} {
       font-size: ${vwTablet(16)};
       letter-spacing: ${vwTablet(1)};

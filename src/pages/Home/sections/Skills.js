@@ -12,13 +12,13 @@ import data from 'src/data/skills';
 
 const Skills = () => {
   return (
-    <Root>
+    <Root name="skills">
       <Container>
         <FadeIn>
           <h2>Skills</h2>
           <Wrapper>
             {data.map((item, index) => (
-              <Card key={index} data={item}/>
+              <Card key={index} data={item} />
             ))}
           </Wrapper>
         </FadeIn>
@@ -29,7 +29,7 @@ const Skills = () => {
 
 const Root = styled.section`
   padding: ${vw(40)} 0;
-  background-color: ${({theme}) => theme.color.mauve};
+  background-color: ${({ theme }) => theme.color.mauve};
   text-align: center;
   h2 {
     margin-bottom: ${vw(20)};

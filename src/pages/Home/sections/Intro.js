@@ -9,11 +9,14 @@ import media from 'src/styles/media';
 
 const Intro = () => {
   return (
-    <Root>
+    <Root name="about">
       <Container>
         <FadeIn>
           <h2>Hi! I'm Dakota</h2>
-          <p>I'm a full stack developer with a passion for creating stunning, responsive front end applications.</p>
+          <p>
+            I'm a full stack developer with a passion for creating stunning,
+            responsive front end applications.
+          </p>
         </FadeIn>
       </Container>
     </Root>
@@ -21,7 +24,7 @@ const Intro = () => {
 };
 
 const Root = styled.section`
-  background-color: ${({theme}) => theme.color.green};
+  background-color: ${({ theme }) => theme.color.green};
   padding: ${vw(40)} 0;
   text-align: center;
   h2 {

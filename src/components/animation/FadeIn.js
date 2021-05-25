@@ -38,7 +38,8 @@ const fadeInUp = (y) => keyframes`
 `;
 
 const fadeCss = css`
-  animation: ${(props) => fadeInUp(props.distance)} ${(props) => `${props.timing}s ${props.timingFunc}`};
+  animation: ${(props) => fadeInUp(props.distance)}
+    ${(props) => `${props.timing}s ${props.timingFunc}`};
 `;
 
 const Root = styled.div`
