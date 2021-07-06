@@ -15,7 +15,7 @@ const Button = (props) => {
       href={href}
       {...props}
     >
-      {text}
+      <span>{text}</span>
     </Root>
   );
 };
@@ -34,23 +34,40 @@ const Root = styled.button`
   padding: ${vw(8)} ${vw(20)};
   background-color: ${({ theme }) => theme.color.lightGrey};
   border: ${vw(2)} solid ${({ theme }) => theme.color.darkGrey};
-  border-radius: ${vw(5)};
   display: block;
   width: fit-content;
   @media ${media.tablet} {
     padding: ${vwTablet(8)} ${vwTablet(25)};
     border: ${vwTablet(2)} solid ${({ theme }) => theme.color.darkGrey};
-    border-radius: ${vwTablet(5)};
   }
   @media ${media.desktop} {
     padding: ${vwDesktop(12)} ${vwDesktop(25)};
     border: ${vwDesktop(2)} solid ${({ theme }) => theme.color.darkGrey};
-    border-radius: ${vwDesktop(5)};
     cursor: pointer;
     transition: ${({ theme }) => theme.transition};
-    &:hover {
+    position: relative;
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      z-index: 1;
       background-color: ${({ theme }) => theme.color.darkGrey};
+      transform: scaleX(0);
+      transform-origin: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: ${({ theme }) => theme.transition};
+    }
+    &:hover {
       color: ${({ theme }) => theme.color.lightGrey};
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 `;

@@ -13,7 +13,7 @@ const Project = (props) => {
       <Wrapper>
         <h3>{project.title}</h3>
         <div className="overflow">
-          <p>{project.description}</p>
+          <p>{project.shortDesc ? project.shortDesc : project.description}</p>
         </div>
       </Wrapper>
     </Root>

@@ -29,7 +29,7 @@ const Skills = () => {
 
 const Root = styled.section`
   padding: ${vw(40)} 0;
-  background-color: ${({ theme }) => theme.color.mauve};
+  background-color: ${({ theme }) => theme.color.blue};
   text-align: center;
   h2 {
     margin-bottom: ${vw(20)};

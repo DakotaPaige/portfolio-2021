@@ -23,7 +23,7 @@ const TextArea = (props) => {
         onChange={handleValue}
         className="form-input"
       />
-      <label for={id} className={`form-label ${value && 'active'}`}>
+      <label htmlFor={id} className={`form-label ${value && 'active'}`}>
         {label}
       </label>
     </Root>

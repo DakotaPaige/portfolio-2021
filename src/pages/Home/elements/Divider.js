@@ -9,7 +9,7 @@ const Divider = () => {
 };
 
 const Root = styled.div`
-  background-color: ${({ theme }) => theme.color.mauve};
+  background-color: ${({ theme }) => theme.color.blue};
   height: ${vw(20)};
   @media ${media.tablet} {
     height: ${vwTablet(40)};

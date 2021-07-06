@@ -16,7 +16,7 @@ const Hero = () => {
         <h1>Dakota Mauza</h1>
         <Nav>
           {sections.map((item, index) => (
-            <Link to={item} smooth>
+            <Link to={item} smooth key={index}>
               {item}
             </Link>
           ))}

@@ -8,6 +8,8 @@ import {
 
 import Container from 'components/Container';
 import FadeIn from 'components/animation/FadeIn';
+import CatOne from 'components/animation/CatOne';
+import CatTwo from 'components/animation/CatTwo';
 import FeaturedProject from '../elements/FeaturedProject';
 import Project from '../elements/Project';
 import Popup from '../elements/Popup';
@@ -60,7 +62,8 @@ const Projects = () => {
   };
 
   return (
-    <Root name="portfolio">
+    <Root name="portfolio" id="portfolio-section">
+      <CatOne />
       <Container>
         <FadeIn>
           <h2>Portfolio</h2>
@@ -95,6 +98,7 @@ const Projects = () => {
           ))}
         </StyledFadeIn>
       </Container>
+      <CatTwo />
       <Popup
         active={isPopupActive}
         activeProject={activeProject}
@@ -111,6 +115,8 @@ const Projects = () => {
 const Root = styled.section`
   padding: ${vw(40)} 0;
   background-color: ${({ theme }) => theme.color.lightGrey};
+  position: relative;
+  overflow-x: hidden;
   h2 {
     text-align: center;
     margin-bottom: ${vw(20)};
@@ -122,7 +128,7 @@ const Root = styled.section`
     }
   }
   @media ${media.desktop} {
-    padding: ${vwDesktop(120)} 0;
+    padding: ${vwDesktop(120)} 0 ${vwDesktop(240)};
     h2 {
       margin-bottom: ${vwDesktop(80)};
     }

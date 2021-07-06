@@ -4,10 +4,10 @@ export default {
     darkGrey: '#46494C',
     green: '#94AE89',
     mauve: '#BA8CA8',
-    red: '#C3423F',
+    blue: '#577399',
   },
   font: {
-    family: 'Work Sans'
+    family: 'Work Sans',
   },
   transition: '0.4s ease',
 };
