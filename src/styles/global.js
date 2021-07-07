@@ -102,6 +102,18 @@ export default createGlobalStyle`
         letter-spacing: ${vwDesktop(1.3)};
       }
     }
+    &.subpoint {
+      font-size: ${vw(12)};
+      letter-spacing: ${vw(0.8)};
+      @media ${media.tablet} {
+        font-size: ${vwTablet(14)};
+        letter-spacing: ${vwTablet(0.9)};
+      }
+      @media ${media.desktop} {
+        font-size: ${vwDesktop(16)};
+        letter-spacing: ${vwDesktop(1)};
+      }
+    }
   }
 
   .button {

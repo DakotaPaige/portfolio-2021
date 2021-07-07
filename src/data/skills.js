@@ -1,40 +1,17 @@
 export default [
   {
     title: 'Front End',
-    points: [
-      'Javascript (ES6)',
-      'React',
-      'Redux',
-      'React Native',
-      'Vue',
-      'jQuery',
-      'HTML',
-      'CSS3/SASS',
-    ],
+    points: ['Javascript', 'React', 'Redux', 'CSS3/SASS'],
+    subpoints: ['React Native', 'Vue', 'jQuery', 'HTML'],
   },
   {
     title: 'Back End',
-    points: [
-      'Node.js',
-      'PHP',
-      'ExpressJS',
-      'PostgresQL',
-      'SQL',
-      'MongoDB',
-      'Python',
-    ],
+    points: ['Node.js', 'PHP', 'SQL', 'Python'],
+    subpoints: ['PostgresQL', 'MongoDB', 'ExpressJS'],
   },
   {
     title: 'Other',
-    points: [
-      'Wordpress',
-      'GraphQL',
-      'Gulp',
-      'Webpack',
-      'GIT',
-      'Styled Components',
-      'Electron',
-      'Apache Cordova for iOS'
-    ],
+    points: ['Webpack', 'GIT', 'Styled Components', 'Wordpress'],
+    subpoints: ['GraphQL', 'Gulp', 'Electron', 'Apache Cordova for iOS'],
   },
-]
+];

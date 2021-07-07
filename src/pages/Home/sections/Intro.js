@@ -16,9 +16,10 @@ const Intro = () => {
           <h2>Hi! I'm Dakota</h2>
           <p>
             I'm a full stack developer from Vancouver, BC with a passion for
-            creating stunning, responsive front end applications. I have
+            creating stunning and responsive front end applications. I have
             experience creating multi platform apps primarily in React, and
             enjoy focusing on seamless animations and pixel-perfect UI. <br />
+            <br />
             <Link smooth to="contact">
               Lets connect!
             </Link>

@@ -32,7 +32,7 @@ const Contact = () => {
   );
 };
 
-const Root = styled.div`
+const Root = styled.section`
   background-color: ${({ theme }) => theme.color.lightGrey};
   padding: ${vw(40)} 0;
   h2 {

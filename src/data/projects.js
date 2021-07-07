@@ -62,7 +62,8 @@ export default [
   },
   {
     title: 'Raphael',
-    description: 'Design configurator lorem ipsum dolor set amit',
+    description:
+      'Raphael is a high end touchscreen application designed to sell luxury low-rise condos. It features a unit floorplan selection experience, custom interactive google map, and custom gallery all tied together with smooth transitions.',
     shortDesc: 'High end touchscreen application with smooth transitions',
     features: ['Touchscreen App'],
     heroImage: require('src/assets/images/projects/raphael/raphael-landing.png'),
@@ -75,7 +76,8 @@ export default [
   },
   {
     title: 'Precidia',
-    description: 'Design configurator lorem ipsum dolor set amit',
+    description:
+      'Precidia is a one-page teaser website to encourage the user to register and seek more information. It has beautiful loading animations, featuring handwritten text and smooth transitions. It is localized to three languages, and with a compelling UI it draws the user to register at the bottom of the site.',
     shortDesc: 'Small teaser website with stand out animations.',
     features: ['Website'],
     heroImage: require('src/assets/images/projects/precidia/precidia1.png'),
@@ -88,6 +90,7 @@ export default [
   {
     title: 'Smith & Farrow',
     description: 'Design configurator lorem ipsum dolor set amit',
+    shortDesc: 'Multi-page website with smooth transitions',
     features: ['Website'],
     heroImage: require('src/assets/images/projects/smithandfarrow/smithandfarrow_landing.png'),
     images: [
@@ -99,6 +102,8 @@ export default [
   {
     title: 'Highpoint',
     description: 'Design configurator lorem ipsum dolor set amit',
+    shortDesc:
+      'Touchscreen and iPad application to showcase multiple residential towers',
     features: ['Touchscreen App', 'iPad app'],
     heroImage: require('src/assets/images/projects/highpoint/highpoint-menu.png'),
     images: [
@@ -112,6 +117,8 @@ export default [
   {
     title: 'Arbutus',
     description: 'Design configurator lorem ipsum dolor set amit',
+    shortDesc:
+      'Stunning website showcasing a new building by the Arbutus greenway.',
     features: ['Website'],
     heroImage: require('src/assets/images/projects/arbutus/arbutus-landing.png'),
     images: [

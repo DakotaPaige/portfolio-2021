@@ -13,7 +13,7 @@ import data from 'src/data/skills';
 const Skills = () => {
   return (
     <Root name="skills">
-      <Container>
+      <StyledContainer>
         <FadeIn>
           <h2>Skills</h2>
           <Wrapper>
@@ -22,15 +22,20 @@ const Skills = () => {
             ))}
           </Wrapper>
         </FadeIn>
-      </Container>
+      </StyledContainer>
+      <Trees
+        src={require('src/assets/images/home/tree-silhouette-grey-min.png')}
+        alt="Trees"
+      />
     </Root>
   );
 };
 
 const Root = styled.section`
-  padding: ${vw(40)} 0;
+  padding: ${vw(40)} 0 ${vw(80)};
   background-color: ${({ theme }) => theme.color.blue};
   text-align: center;
+  position: relative;
   h2 {
     margin-bottom: ${vw(20)};
   }
@@ -41,7 +46,7 @@ const Root = styled.section`
     }
   }
   @media ${media.desktop} {
-    padding: ${vwDesktop(120)} 0;
+    padding: ${vwDesktop(120)} 0 ${vwDesktop(240)};
     h2 {
       margin-bottom: ${vwDesktop(80)};
     }
@@ -57,6 +62,21 @@ const Wrapper = styled.div`
   @media ${media.desktop} {
     flex-wrap: nowrap;
   }
+`;
+
+const StyledContainer = styled(Container)`
+  position: relative;
+  z-index: 2;
+`;
+
+const Trees = styled.img`
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
 `;
 
 export default Skills;
