@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { Link } from 'react-scroll';
 
@@ -10,17 +10,26 @@ import media from 'src/styles/media';
 const sections = ['about', 'skills', 'portfolio', 'contact'];
 
 const Hero = () => {
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setHasLoaded(true), 4000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <Root>
       <Container>
-        <h1>Dakota Mauza</h1>
-        <Nav>
-          {sections.map((item, index) => (
-            <Link to={item} smooth key={index}>
-              {item}
-            </Link>
-          ))}
-        </Nav>
+        <Wrapper hasLoaded={hasLoaded}>
+          <h1>Dakota Mauza</h1>
+          <Nav>
+            {sections.map((item, index) => (
+              <Link to={item} smooth key={index}>
+                {item}
+              </Link>
+            ))}
+          </Nav>
+        </Wrapper>
         <Link to="about" smooth>
           <Scroll>
             <p className="grey scroll">Scroll</p>
@@ -49,6 +58,11 @@ const Root = styled.section`
   @media ${media.desktop} {
     padding: ${vwDesktop(160)} 0;
   }
+`;
+
+const Wrapper = styled.div`
+  opacity: ${(props) => (props.hasLoaded ? 1 : 0)};
+  transition: 0.7s ease-in;
 `;
 
 const transformDown = keyframes`

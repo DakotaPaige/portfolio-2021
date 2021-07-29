@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Load from 'components/animation/Load';
 import Footer from 'components/Footer';
 import Hero from './sections/Hero';
 import Intro from './sections/Intro';
@@ -12,6 +13,7 @@ import Divider from './elements/Divider';
 const Home = () => {
   return (
     <Root>
+      <Load />
       <Hero />
       <Intro />
       <Skills />

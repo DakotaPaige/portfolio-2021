@@ -10,11 +10,6 @@ const ImageSequence = forwardRef((props, ref) => {
   let index = Math.round(progress * 1 * (images.length - 1));
   let left = progress - 0.25 > 0 ? progress - 0.25 : 0;
 
-  console.log(index);
-
-  // console.log(left);
-
-  // console.dir(element);
   if (document.getElementById('cat')) {
     document.getElementById('cat').style.left = `${left * 100}%`;
   }
