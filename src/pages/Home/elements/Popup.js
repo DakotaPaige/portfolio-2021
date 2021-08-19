@@ -31,6 +31,7 @@ const Popup = (props) => {
         alt="Close"
         onClick={handleClose}
       />
+
       {data.map((item, index) => (
         <Wrapper
           key={index}
@@ -46,8 +47,19 @@ const Popup = (props) => {
             isPopupOpen={active}
           />
           <div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <h3 className="bold">{item.title}</h3>
+            <h4>Featuring:</h4>
+            <Featuring>
+              <p className="subpoint">
+                {item.features.map((feature, f) => (
+                  <span key={f}>
+                    {feature}
+                    {f !== item.features.length - 1 && ', '}{' '}
+                  </span>
+                ))}
+              </p>
+            </Featuring>
+            <p className="overflow">{item.description}</p>
             <Buttons>
               {item.url && (
                 <Button
@@ -67,9 +79,26 @@ const Popup = (props) => {
               )}
             </Buttons>
           </div>
+          <Nav>
+            <div onClick={handlePrev}>
+              <Arrow
+                src={require('src/assets/images/icons/double-arrow.svg')}
+                alt="Previous"
+              />
+              <p className="scroll">Prev</p>
+            </div>
+            <div onClick={handleNext}>
+              <p className="scroll">Next</p>
+              <Arrow
+                src={require('src/assets/images/icons/double-arrow.svg')}
+                alt="Next"
+                next
+              />
+            </div>
+          </Nav>
         </Wrapper>
       ))}
-      <Nav>
+      {/* <Nav>
         <div onClick={handlePrev}>
           <Arrow
             src={require('src/assets/images/icons/double-arrow.svg')}
@@ -85,7 +114,7 @@ const Popup = (props) => {
             next
           />
         </div>
-      </Nav>
+      </Nav> */}
     </Root>
   );
 };
@@ -105,7 +134,8 @@ const Root = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: max-content;
   padding: ${vw(60)} 0;
   transition: ${({ theme }) => theme.transition};
   background-color: ${({ theme }) => theme.color.lightGrey};
@@ -122,24 +152,28 @@ const Root = styled.div`
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  top: ${vw(60)};
+  min-height: 100%;
+  top: 0;
   left: 0;
-  padding: 0 ${vw(16)};
+  padding: ${vw(60)} ${vw(16)} ${vw(60)};
   transition: ${({ theme }) => theme.transition};
   h3 {
     margin: ${vw(20)} 0 ${vw(10)};
   }
-  p {
+  .bold {
+    font-weight: 600;
+  }
+  .overflow {
     max-height: ${vw(135)};
     overflow-y: auto;
   }
   @media ${media.tablet} {
-    top: ${vwTablet(80)};
-    padding: 0 ${vwTablet(30)};
+    top: 0;
+    padding: ${vwTablet(80)} ${vwTablet(30)} 0;
     h3 {
       margin: ${vwTablet(40)} 0 ${vwTablet(20)};
     }
-    p {
+    .overflow {
       max-height: ${vwTablet(250)};
       max-width: ${vwTablet(500)};
     }
@@ -153,10 +187,22 @@ const Wrapper = styled.div`
     h3 {
       margin: ${vwDesktop(40)} 0 ${vwDesktop(20)};
     }
-    p {
+    .overflow {
       max-height: ${vwDesktop(250)};
       max-width: ${vwDesktop(500)};
     }
+  }
+`;
+
+const Featuring = styled.div`
+  margin-bottom: ${vw(10)};
+  @media ${media.tablet} {
+    margin-bottom: ${vwTablet(15)};
+    max-width: ${vwTablet(500)};
+  }
+  @media ${media.desktop} {
+    margin-bottom: ${vwDesktop(15)};
+    max-width: ${vwDesktop(500)};
   }
 `;
 
@@ -186,6 +232,7 @@ const Nav = styled.div`
   bottom: ${vw(25)};
   padding: 0 ${vw(16)};
   width: 100%;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

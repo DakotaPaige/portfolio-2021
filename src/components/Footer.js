@@ -12,9 +12,14 @@ const Footer = () => {
     <Root>
       <StyledContainer>
         <Wrapper>
-          <p>Icons here</p>
+          <a href="mailto:dakota@dakotamauza.com">
+            <Icon
+              src={require('src/assets/images/icons/email.svg')}
+              alt="Mail"
+            />
+          </a>
         </Wrapper>
-        <p className='disclaimer'>&copy; {date.getFullYear()} Dakota Mauza.</p>
+        <p className="disclaimer">&copy; {date.getFullYear()} Dakota Mauza.</p>
       </StyledContainer>
     </Root>
   );
@@ -22,7 +27,7 @@ const Footer = () => {
 
 const Root = styled.footer`
   padding: ${vw(20)} 0;
-  background-color: ${({theme}) => theme.color.green};
+  background-color: ${({ theme }) => theme.color.green};
   @media ${media.tablet} {
     padding: ${vwTablet(20)} 0;
   }
@@ -31,17 +36,22 @@ const Root = styled.footer`
   }
 `;
 
-const Wrapper = styled.div`
-  margin-bottom: ${vw(40)};
-  @media ${media.tablet} {
-    margin-bottom: 0;
-  }
-`;
+const Wrapper = styled.div``;
 
 const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Icon = styled.img`
+  display: block;
+  width: ${vw(20)};
   @media ${media.tablet} {
-    display: flex;
-    justify-content: space-between;
+    width: ${vwTablet(25)};
+  }
+  @media ${media.desktop} {
+    width: ${vwDesktop(25)};
   }
 `;
 

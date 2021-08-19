@@ -6,8 +6,8 @@ export default [
     features: [
       'Localized Website',
       'TV app',
-      'iPad app with connection to the TV app',
-      'Building data stored in an external API',
+      'iPad app with remote feature for TV',
+      'Unit data stored in an external API',
     ],
     heroImage: require('src/assets/images/projects/gryphon/gryphon-house-landing.png'),
     images: [
@@ -23,7 +23,7 @@ export default [
     title: 'Spire Seattle',
     description:
       'Spire Seattle is a website sales experience created to rebrand the original vision and drive sales. With a smooth page flow and beautiful subtle animations, it allows users to have a visual experience with the building and neighbourhood while also receiving all real-time unit availability data.',
-    features: ['Website'],
+    features: ['Website', 'Wordpress for News data', 'Exciting animations'],
     heroImage: require('src/assets/images/projects/spire/spire-landing.png'),
     images: [
       require('src/assets/images/projects/spire/spire-home.png'),
@@ -37,7 +37,11 @@ export default [
     description:
       'The Kutak design configurator is built to provide users with a seamless sales experience. Users can configure and design their dream unit, preview, print and save the data, and recieve a customized email allowing them to register further or link back to their unique chosen settings.',
     shortDesc: 'A seamless, unique sales experience to design your dream unit.',
-    features: ['Website', 'Custom Home Design Configurator'],
+    features: [
+      'Full Website',
+      'Custom Home Design Configurator',
+      'Custom PHP Emailer',
+    ],
     heroImage: require('src/assets/images/projects/kutak/kutak-landing.png'),
     images: [
       require('src/assets/images/projects/kutak/kutak-2.png'),
@@ -51,7 +55,7 @@ export default [
     description:
       'The Gryphon Royal Curator is built as a subsite to provide customers with an easily accessible personalized home experience. It features multiple SVG and scrolling animations, and an elevated responsive design.',
     shortDesc: 'A short multi-page site with stunning visuals and animations.',
-    features: ['Website'],
+    features: ['Website', 'SVG and scrolling animations'],
     heroImage: require('src/assets/images/projects/gryphon/royalcurator1.png'),
     images: [
       require('src/assets/images/projects/gryphon/royalcurator2.png'),
@@ -79,7 +83,7 @@ export default [
     description:
       'Precidia is a one-page teaser website to encourage the user to register and seek more information. It has beautiful loading animations, featuring handwritten text and smooth transitions. It is localized to three languages, and with a compelling UI it draws the user to register at the bottom of the site.',
     shortDesc: 'Small teaser website with stand out animations.',
-    features: ['Website'],
+    features: ['Website', 'SVG Animations'],
     heroImage: require('src/assets/images/projects/precidia/precidia1.png'),
     images: [
       require('src/assets/images/projects/precidia/precidia2.png'),
@@ -89,7 +93,8 @@ export default [
   },
   {
     title: 'Smith & Farrow',
-    description: 'Design configurator lorem ipsum dolor set amit',
+    description:
+      'Smith and Farrow is a multipage website with sleek animations and a unique design. It was built in multiple phases, to ultimately include the building, community and neighbourhood information in a clear and modern way.',
     shortDesc: 'Multi-page website with smooth transitions',
     features: ['Website'],
     heroImage: require('src/assets/images/projects/smithandfarrow/smithandfarrow_landing.png'),
@@ -101,10 +106,11 @@ export default [
   },
   {
     title: 'Highpoint',
-    description: 'Design configurator lorem ipsum dolor set amit',
+    description:
+      'Highpoint was built as both a touchscreen application and iPad app to be used to promote sales in their presentation centre. It features floorplan selections, interactive views to experience, a neighbourhood map to explore and more.',
     shortDesc:
       'Touchscreen and iPad application to showcase multiple residential towers',
-    features: ['Touchscreen App', 'iPad app'],
+    features: ['Touchscreen App', 'iPad app', 'Custom Interactive Map'],
     heroImage: require('src/assets/images/projects/highpoint/highpoint-menu.png'),
     images: [
       require('src/assets/images/projects/highpoint/highpoint-2.png'),
@@ -116,10 +122,10 @@ export default [
   },
   {
     title: 'Arbutus',
-    description: 'Design configurator lorem ipsum dolor set amit',
+    description: `The Arbutus is a gorgeous multipage website showcasing a new building next to the Arbutus greenway. It's smooth animations and natural graphics lend to its calming feeling, while featuring multiple interactive elements to keep the user clicking through the site to find more.`,
     shortDesc:
       'Stunning website showcasing a new building by the Arbutus greenway.',
-    features: ['Website'],
+    features: ['Website', 'Smooth Animations'],
     heroImage: require('src/assets/images/projects/arbutus/arbutus-landing.png'),
     images: [
       require('src/assets/images/projects/arbutus/arbutus-2.png'),

@@ -76,6 +76,22 @@ export default createGlobalStyle`
     }
   }
 
+  h4 {
+    font-size: ${vw(12)};
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: ${vw(0.8)};
+    text-transform: uppercase;
+    @media ${media.tablet} {
+      font-size: ${vwTablet(14)};
+      letter-spacing: ${vwTablet(1)};
+    }
+    @media ${media.desktop} {
+      font-size: ${vwDesktop(16)};
+      letter-spacing: ${vwDesktop(1.2)};
+    }
+  }
+
   p, li {
     font-size: ${vw(14)};
     font-weight: 300;
