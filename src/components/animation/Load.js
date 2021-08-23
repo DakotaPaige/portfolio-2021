@@ -14,7 +14,7 @@ const Load = () => {
   const $load = useRef();
 
   useEffect(() => {
-    disableBodyScroll($load.current);
+    // disableBodyScroll($load.current);
     const timeout = setTimeout(() => {
       enableBodyScroll($load.current);
       clearAllBodyScrollLocks();
