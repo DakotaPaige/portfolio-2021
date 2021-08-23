@@ -17,6 +17,7 @@ const Load = () => {
     disableBodyScroll($load.current);
     const timeout = setTimeout(() => {
       enableBodyScroll($load.current);
+      clearAllBodyScrollLocks();
       setHasLoaded(true);
     }, 4000);
     return () => {
