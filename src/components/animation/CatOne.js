@@ -59,8 +59,8 @@ const Root = styled.div`
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    width: ${vwDesktop(600)};
+    right: ${vwDesktop(-170)};
+    width: ${vwDesktop(770)};
   }
 `;
 

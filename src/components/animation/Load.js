@@ -1,15 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
+
+import Tree from './Tree';
 
 const Load = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
 
+  const $load = useRef();
+
   useEffect(() => {
-    const timeout = setTimeout(() => setHasLoaded(true), 2000);
-    return () => clearTimeout(timeout);
+    disableBodyScroll($load.current);
+    const timeout = setTimeout(() => {
+      enableBodyScroll($load.current);
+      setHasLoaded(true);
+    }, 4000);
+    return () => {
+      clearTimeout(timeout);
+      clearAllBodyScrollLocks();
+    };
   }, []);
 
-  return <Root hasLoaded={hasLoaded}></Root>;
+  return (
+    <Root hasLoaded={hasLoaded} ref={$load}>
+      <Tree />
+    </Root>
+  );
 };
 
 const Root = styled.div`
@@ -21,7 +41,7 @@ const Root = styled.div`
   background-color: ${({ theme }) => theme.color.lightGrey};
   z-index: 10;
   opacity: ${(props) => (props.hasLoaded ? 0 : 1)};
-  transition: 3s ease-out;
+  transition: 2s ease-out;
   pointer-events: none;
 `;
 

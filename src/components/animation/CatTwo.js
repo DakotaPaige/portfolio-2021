@@ -16,6 +16,16 @@ const CatTwo = () => {
     useImage(require('src/assets/images/walking-cat/cat3.png')),
     useImage(require('src/assets/images/walking-cat/cat4.png')),
     useImage(require('src/assets/images/walking-cat/cat5.png')),
+    useImage(require('src/assets/images/walking-cat/cat1.png')),
+    useImage(require('src/assets/images/walking-cat/cat2.png')),
+    useImage(require('src/assets/images/walking-cat/cat3.png')),
+    useImage(require('src/assets/images/walking-cat/cat4.png')),
+    useImage(require('src/assets/images/walking-cat/cat5.png')),
+    useImage(require('src/assets/images/walking-cat/cat1.png')),
+    useImage(require('src/assets/images/walking-cat/cat2.png')),
+    useImage(require('src/assets/images/walking-cat/cat3.png')),
+    useImage(require('src/assets/images/walking-cat/cat4.png')),
+    useImage(require('src/assets/images/walking-cat/cat5.png')),
     useImage(require('src/assets/images/walking-cat/cat6.png')),
     useImage(require('src/assets/images/walking-cat/cat7.png')),
     useImage(require('src/assets/images/walking-cat/cat8.png')),
@@ -59,7 +69,7 @@ const CatTwo = () => {
   return (
     <Controller>
       <Root id="cat-two">
-        <ScrollTrigger start="-250px center" end="0 center" scrub>
+        <ScrollTrigger start="-300px center" end="0 center" scrub>
           <Scene duration={500} triggerElement="#cat-two" offset={'-200px'}>
             {(progress) => (
               <Tween
@@ -67,7 +77,7 @@ const CatTwo = () => {
                   x: 0,
                 }}
                 to={{
-                  x: '100%',
+                  x: '30vw',
                 }}
               >
                 <Cat>
@@ -94,7 +104,7 @@ const Root = styled.div`
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: ${vwDesktop(-110)};
     width: ${vwDesktop(720)};
   }
 `;

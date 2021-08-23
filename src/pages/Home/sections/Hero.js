@@ -13,7 +13,7 @@ const Hero = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setHasLoaded(true), 4000);
+    const timeout = setTimeout(() => setHasLoaded(true), 5000);
     return () => clearTimeout(timeout);
   }, []);
 
