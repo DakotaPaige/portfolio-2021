@@ -121,30 +121,35 @@ const scale = keyframes`
 
 const SVG = styled.svg`
   display: block;
-  width: ${vw(258)};
-  height: ${vw(258)};
+  width: ${vw(205)};
+  height: auto;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  overflow: visible;
 
+  g {
+    width: 100%;
+  }
   .tree {
     fill: #46494c;
   }
 
   .circle-mask {
+    width: 100%;
     transform-origin: 50% 90%;
     animation: ${scale} 4s forwards ease-out;
   }
 
   @media ${media.tablet} {
-    width: ${vwTablet(258)};
-    height: ${vwTablet(258)};
+    width: ${vwTablet(240)};
+    /* height: ${vwTablet(258)}; */
   }
 
   @media ${media.desktop} {
-    width: ${vwDesktop(258)};
-    height: ${vwDesktop(258)};
+    width: ${vwDesktop(240)};
+    /* height: ${vwDesktop(258)}; */
   }
 `;
 

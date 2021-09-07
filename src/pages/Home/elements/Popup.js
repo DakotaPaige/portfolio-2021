@@ -46,20 +46,22 @@ const Popup = (props) => {
             title={item.title}
             isPopupOpen={active}
           />
-          <div>
-            <h3 className="bold">{item.title}</h3>
-            <h4>Featuring:</h4>
-            <Featuring>
-              <p className="subpoint">
-                {item.features.map((feature, f) => (
-                  <span key={f}>
-                    {feature}
-                    {f !== item.features.length - 1 && ', '}{' '}
-                  </span>
-                ))}
-              </p>
-            </Featuring>
-            <p className="overflow">{item.description}</p>
+          <div className="container">
+            <div>
+              <h3 className="bold">{item.title}</h3>
+              <h4>Featuring:</h4>
+              <Featuring>
+                <p className="subpoint">
+                  {item.features.map((feature, f) => (
+                    <span key={f}>
+                      {feature}
+                      {f !== item.features.length - 1 && ', '}{' '}
+                    </span>
+                  ))}
+                </p>
+              </Featuring>
+              <p className="overflow">{item.description}</p>
+            </div>
             <Buttons>
               {item.url && (
                 <Button
@@ -174,8 +176,12 @@ const Wrapper = styled.div`
       margin: ${vwTablet(40)} 0 ${vwTablet(20)};
     }
     .overflow {
-      max-height: ${vwTablet(250)};
+      max-height: ${vwTablet(200)};
       max-width: ${vwTablet(500)};
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
     }
   }
   @media ${media.desktop} {
@@ -190,6 +196,10 @@ const Wrapper = styled.div`
     .overflow {
       max-height: ${vwDesktop(250)};
       max-width: ${vwDesktop(500)};
+    }
+    .container {
+      flex-direction: column;
+      justify-content: flex-start;
     }
   }
 `;
@@ -215,13 +225,19 @@ const Buttons = styled.div`
   }
   @media ${media.tablet} {
     margin-top: ${vwTablet(30)};
+    flex-direction: column;
+    align-items: flex-end;
     a:nth-of-type(2) {
+      margin-top: ${vwTablet(20)};
       margin-left: ${vwTablet(20)};
     }
   }
   @media ${media.desktop} {
     margin-top: ${vwDesktop(30)};
+    flex-direction: row;
+    align-items: center;
     a:nth-of-type(2) {
+      margin-top: 0;
       margin-left: ${vwDesktop(20)};
     }
   }

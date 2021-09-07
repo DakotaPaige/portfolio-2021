@@ -16,7 +16,7 @@ export default [
       require('src/assets/images/projects/gryphon/gryphon-house-menu-hover.png'),
     ],
     url: 'https://gryphonhousevancouver.com/',
-    github: 'https://gryphonhousevancouver.com/',
+    // github: 'https://gryphonhousevancouver.com/',
     featured: true,
   },
   {
