@@ -5933,6 +5933,11 @@ is-docker@^2.0.0:
   resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.2.1.tgz#33eeabe23cfe86f14bde4408a02c0cfb853acdaa"
   integrity sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==
 
+is-element@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/is-element/-/is-element-0.1.0.tgz#c43478df14ab02b7c66d7498fb5456600bfef1fb"
+  integrity sha1-xDR43xSrArfGbXSY+1RWYAv+8fs=
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -10422,6 +10427,13 @@ string-length@^3.1.0:
   dependencies:
     astral-regex "^1.0.0"
     strip-ansi "^5.2.0"
+
+string-to-dom@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/string-to-dom/-/string-to-dom-0.1.5.tgz#02764552a73750ea3ae7f4fcc6259459b0619176"
+  integrity sha1-AnZFUqc3UOo65/T8xiWUWbBhkXY=
+  dependencies:
+    is-element "^0.1.0"
 
 string-width@^3.0.0, string-width@^3.1.0:
   version "3.1.0"

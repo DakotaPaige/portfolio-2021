@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { hot } from 'react-hot-loader';
 
+import { prerenderStyles } from 'src/plugins/prerender';
 import routes from 'src/routes';
 
 const App = () => {
+  useEffect(() => {
+    prerenderStyles();
+  }, []);
+
   const generateRoutes = () => {
     return routes.map((route, index) => {
       const { path, component } = route;
