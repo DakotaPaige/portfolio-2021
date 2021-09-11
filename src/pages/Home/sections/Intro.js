@@ -19,11 +19,29 @@ const Intro = () => {
             creating stunning and responsive front end applications. I have
             experience creating multi platform apps primarily in React, and
             enjoy focusing on seamless animations and pixel-perfect UI. <br />
-            <br />
-            <Link smooth to="contact">
-              Lets connect!
-            </Link>
           </p>
+          <Links>
+            <p>
+              <Link smooth to="contact">
+                Lets connect!
+              </Link>
+            </p>
+            <p>
+              <a
+                href="https://github.com/DakotaPaige"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </p>
+            <p>
+              {' '}
+              <a href="/" target="_blank">
+                Resume
+              </a>
+            </p>
+          </Links>
         </FadeIn>
       </Container>
     </Root>
@@ -70,6 +88,39 @@ const Root = styled.section`
     }
     a:hover::after {
       transform: scaleX(1);
+    }
+  }
+`;
+
+const Links = styled.div`
+  margin-top: ${vw(20)};
+  p {
+    margin-bottom: ${vw(10)};
+  }
+  @media ${media.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: ${vwTablet(30)};
+    p {
+      margin-bottom: 0;
+      width: ${vwTablet(120)};
+      &:nth-of-type(2) {
+        margin-left: ${vwTablet(20)};
+        margin-right: ${vwTablet(20)};
+      }
+    }
+  }
+  @media ${media.desktop} {
+    margin: ${vwDesktop(40)} auto 0;
+    width: fit-content;
+    p {
+      margin-bottom: 0;
+      width: ${vwDesktop(150)};
+      &:nth-of-type(2) {
+        margin-left: ${vwDesktop(20)};
+        margin-right: ${vwDesktop(20)};
+      }
     }
   }
 `;
