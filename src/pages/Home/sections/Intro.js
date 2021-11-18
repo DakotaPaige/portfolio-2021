@@ -37,7 +37,7 @@ const Intro = () => {
             </p>
             <p>
               {' '}
-              <a href="/pdf/Resume.pdf" target="_blank">
+              <a href="/assets/pdf/Resume.pdf" target="_blank">
                 Resume
               </a>
             </p>

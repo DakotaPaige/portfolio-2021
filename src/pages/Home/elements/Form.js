@@ -21,7 +21,7 @@ const Form = () => {
 
     const formData = new FormData($form.current);
 
-    await fetch('https:/dakotamauza.com/scripts/mailer.php', {
+    await fetch('https:/jaypegsworld.com/scripts/dakota-mailer.php', {
       method: 'POST',
       body: formData,
     })

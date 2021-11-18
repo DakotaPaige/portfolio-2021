@@ -61,6 +61,7 @@ const Root = styled.button`
       left: 0;
       width: 100%;
       height: 100%;
+      box-sizing: border-box;
       transition: ${({ theme }) => theme.transition};
     }
     &:hover {

@@ -147,6 +147,11 @@ const StyledFadeIn = styled(FadeIn)`
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  @media ${media.desktop} {
+    display: grid;
+    grid-template-columns: ${vwDesktop(420)} ${vwDesktop(420)} ${vwDesktop(420)};
+    grid-column-gap: ${vwDesktop(30)};
+  }
 `;
 
 export default Projects;

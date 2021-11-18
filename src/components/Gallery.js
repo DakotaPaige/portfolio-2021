@@ -54,7 +54,11 @@ const Gallery = (props) => {
               opacity: activeImage === index ? 1 : 0,
             }}
           >
-            <img src={item} alt={title} />
+            {item.video ? (
+              <video src={item.src} alt="" autoPlay muted playsInline loop />
+            ) : (
+              <img src={item} alt={title} />
+            )}
           </Image>
         ))}
       </Wrapper>
@@ -119,7 +123,8 @@ const Image = styled.div`
   align-items: center;
   justify-content: center;
   transition: ${({ theme }) => theme.transition};
-  img {
+  img,
+  video {
     max-width: 100%;
     max-height: 100%;
   }
