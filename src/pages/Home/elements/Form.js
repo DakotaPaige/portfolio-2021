@@ -45,6 +45,7 @@ const Form = () => {
         ref={$form}
         name="contact"
         netlify
+        data-netlify-recaptcha="true"
         onSubmit={(e) => handleSubmit(e)}
         style={{
           opacity: hasSubmitted ? 0 : 1,
@@ -71,6 +72,7 @@ const Form = () => {
             There seems to be an error with the form submission. Please try
             again, or send me an email through the link provided.
           </Error>
+          <div data-netlify-recaptcha="true" />
         </Wrapper>
       </form>
       <Submitted
