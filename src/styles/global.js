@@ -132,6 +132,21 @@ export default createGlobalStyle`
     }
   }
 
+  .hero-link {
+    font-size: ${vw(14)};
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: ${vw(0.9)};
+    @media ${media.tablet} {
+      font-size: ${vwTablet(16)};
+      letter-spacing: ${vwTablet(1)};
+    }
+    @media ${media.desktop} {
+      font-size: ${vwDesktop(18)};
+      letter-spacing: ${vwDesktop(1.2)};
+    }
+  }
+
   .button {
     font-size: ${vw(12)};
     font-weight: 500;

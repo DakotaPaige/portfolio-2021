@@ -24,7 +24,7 @@ const Hero = () => {
           <h1>Dakota Mauza</h1>
           <Nav>
             {sections.map((item, index) => (
-              <Link to={item} smooth key={index}>
+              <Link to={item} smooth key={index} className="hero-link">
                 {item}
               </Link>
             ))}
@@ -139,6 +139,10 @@ const Nav = styled.div`
     a {
       cursor: pointer;
       margin-right: ${vwDesktop(30)};
+      transition: 0.4s ease;
+      &:hover {
+        color: ${({ theme }) => theme.color.blue};
+      }
     }
   }
 `;

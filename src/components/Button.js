@@ -15,6 +15,7 @@ const Button = (props) => {
       href={href}
       {...props}
     >
+      <Background className="background" />
       <span>{text}</span>
     </Root>
   );
@@ -42,7 +43,7 @@ const Root = styled.button`
   }
   @media ${media.desktop} {
     padding: ${vwDesktop(12)} ${vwDesktop(25)};
-    border: ${vwDesktop(2)} solid ${({ theme }) => theme.color.darkGrey};
+    border: 2px solid ${({ theme }) => theme.color.darkGrey};
     cursor: pointer;
     transition: ${({ theme }) => theme.transition};
     position: relative;
@@ -50,26 +51,29 @@ const Root = styled.button`
       position: relative;
       z-index: 2;
     }
-    &::after {
-      content: '';
-      z-index: 1;
-      background-color: ${({ theme }) => theme.color.darkGrey};
-      transform: scaleX(0);
-      transform-origin: left;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      transition: ${({ theme }) => theme.transition};
-    }
     &:hover {
       color: ${({ theme }) => theme.color.lightGrey};
-      &::after {
-        transform: scaleX(1);
+      .background {
+        max-width: 100%;
       }
     }
+  }
+`;
+
+const Background = styled.div`
+  display: none;
+  @media ${media.desktop} {
+    display: block;
+    z-index: 1;
+    background-color: ${({ theme }) => theme.color.darkGrey};
+    transform-origin: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 0;
+    width: 100%;
+    height: 100%;
+    transition: ${({ theme }) => theme.transition};
   }
 `;
 

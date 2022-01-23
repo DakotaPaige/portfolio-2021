@@ -21,8 +21,9 @@ const Form = () => {
 
     const formData = new FormData($form.current);
 
-    await fetch('https:/jaypegsworld.com/scripts/dakota-mailer.php', {
+    await fetch('/', {
       method: 'POST',
+      'Content-Type': 'application/x-www-form-urlencoded',
       body: formData,
     })
       .then(() => {
@@ -42,12 +43,15 @@ const Form = () => {
         action=""
         method="post"
         ref={$form}
+        name="contact"
+        netlify
         onSubmit={(e) => handleSubmit(e)}
         style={{
           opacity: hasSubmitted ? 0 : 1,
           pointerEvents: hasSubmitted ? 'none' : 'all',
         }}
       >
+        <input type="hidden" name="form-name" value="contact" />
         <Input name="name" id="name" required label="Name *" />
         <Input name="email" id="email" required label="Email *" type="email" />
         <TextArea name="message" id="message" label="Message" />
