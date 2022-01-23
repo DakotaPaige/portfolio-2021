@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button from 'components/Button';
 import Input from './Input';
@@ -14,10 +15,13 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const $form = useRef();
+  const $recaptcha = useRef();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+
+    await $recaptcha.current.executeAsync();
 
     const formData = new FormData($form.current);
 
@@ -72,7 +76,11 @@ const Form = () => {
             There seems to be an error with the form submission. Please try
             again, or send me an email through the link provided.
           </Error>
-          <div data-netlify-recaptcha="true" />
+          <ReCAPTCHA
+            ref={$recaptcha}
+            size="invisible"
+            sitekey="6LcY7TEeAAAAAJ4FXLxZ4qWOj9nd_-Di8-XwrJW6"
+          />
         </Wrapper>
       </form>
       <Submitted
