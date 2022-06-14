@@ -71,6 +71,14 @@ const Popup = (props) => {
                   rel="noreferrer noopener"
                 />
               )}
+              {item.url2 && (
+                <Button
+                  text="Visit Website"
+                  href={item.url2}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                />
+              )}
               {item.github && (
                 <Button
                   text="Github"

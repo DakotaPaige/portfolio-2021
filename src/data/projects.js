@@ -37,6 +37,51 @@ export default [
     featured: true,
   },
   {
+    title: '1818 Alberni',
+    description:
+      '1818 Alberni is a beautiful website to showcase a high end building in the heart of downtown Vancouver. It features smooth transitions to tie together the collage layout and subtle interactions for the user to enjoy. I also helped to create an iPad and TV app for the sales centre, where the iPad can be used as a standalone app or as a remote to display to the TV app. This is used as a helpful sales tool and a way to create more interaction between the user and the building.',
+    shortDesc:
+      'A beautiful website with smooth transitions showcasing a high end building',
+    features: [
+      'Full Website',
+      'iPad and TV connected app',
+      'Smooth transitions',
+      'Component structure',
+    ],
+    heroImage: require('src/assets/images/projects/1818/1818-1.png'),
+    images: [
+      require('src/assets/images/projects/1818/1818-2.png'),
+      require('src/assets/images/projects/1818/1818-3.png'),
+      require('src/assets/images/projects/1818/1818-4.png'),
+    ],
+    url: 'https://landaglobal.com/1818alberni/',
+  },
+  {
+    title: 'Contour & Dorian',
+    description:
+      'If you take a look you might see why these are included together, they are built using nearly the exact same component structure with each appropriate branding. This was a fun opportunity as I was able to build Contour first with Dorian following shortly after, and create a standardized component library. To name a few, the menu header, testimonials, floorplans page and neigbourhood map are all shared components.',
+    shortDesc:
+      'Two websites to showcase rental buildings using the same component structure',
+    features: [
+      'Full Website',
+      'Component Structure',
+      'Exciting Interactions',
+      'API integration',
+    ],
+    heroImage: require('src/assets/images/projects/contour/contour-1.png'),
+    images: [
+      require('src/assets/images/projects/contour/contour-2.png'),
+      require('src/assets/images/projects/contour/contour-3.png'),
+      require('src/assets/images/projects/contour/contour-4.png'),
+      require('src/assets/images/projects/contour/contour-5.png'),
+      require('src/assets/images/projects/dorian/dorian-1.png'),
+      require('src/assets/images/projects/dorian/dorian-2.png'),
+      require('src/assets/images/projects/dorian/dorian-3.png'),
+    ],
+    url: 'https://contourseattle.com/',
+    url2: 'https://www.dorianseattle.com/',
+  },
+  {
     title: 'One Central',
     description:
       'One Central was a great learning experience, where I was able to be a part of the original launch in 2018 and then lead the site rebrand in 2021. Through the rebrand, we were able to focus on unique scrolling animations and visuals to draw the user in, while preserving the original flow and information.',
