@@ -10,7 +10,7 @@ import media from 'src/styles/media';
 
 const Contact = () => {
   return (
-    <Root name="contact">
+    <Root name="contact" id="contact">
       <Container>
         <FadeIn>
           <h2>Get in Touch</h2>
