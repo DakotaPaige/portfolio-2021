@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Front End',
-    points: ['Javascript', 'React', 'Redux', 'CSS3/SASS'],
+    points: ['Typescript/Javascript', 'React', 'Redux', 'CSS3/SASS'],
     subpoints: ['React Native', 'Vue', 'jQuery', 'HTML'],
   },
   {
