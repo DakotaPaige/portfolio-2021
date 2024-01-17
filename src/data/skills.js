@@ -1,8 +1,8 @@
 export default [
   {
     title: 'Front End',
-    points: ['Typescript/Javascript', 'React', 'Redux', 'CSS3/SASS'],
-    subpoints: ['React Native', 'Vue', 'jQuery', 'HTML'],
+    points: ['Typescript/Javascript', 'React', 'NextJS', 'CSS3/SASS'],
+    subpoints: ['Redux', 'React Native', 'Vue', 'jQuery'],
   },
   {
     title: 'Back End',
@@ -12,6 +12,6 @@ export default [
   {
     title: 'Other',
     points: ['Webpack', 'GIT', 'Styled Components', 'Wordpress'],
-    subpoints: ['GraphQL', 'Gulp', 'Electron', 'Apache Cordova for iOS'],
+    subpoints: ['GraphQL', 'Storybook', 'Electron', 'Apache Cordova for iOS'],
   },
 ];
