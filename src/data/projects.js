@@ -37,6 +37,43 @@ export default [
     featured: true,
   },
   {
+    title: 'Combine Cafe',
+    description: `Combine Cafe's website is a sleek one-page platform, designed to spotlight the cafe with captivating scrolling animations that engage users. Utilizing GSAP, the animations are crafted to be smooth and responsive across all devices, enriching the visitor's experience. This approach not only showcases the cafe's highlights but also immerses users in the brand's essence, ensuring a memorable interaction with Combine Cafe's online presence.`,
+    shortDesc: 'A one-page website with stunning scroll animations.',
+    features: ['GSAP Scroll Animations', 'Smooth transitions'],
+    heroImage: require('src/assets/images/projects/combine/combine-1.png'),
+    images: [require('src/assets/images/projects/combine/combine-2.png')],
+    url: 'https://combinecafe.ca/',
+  },
+  {
+    title: 'Locale',
+    description: `Locale's vibrant branding inspired a user-friendly website and touchscreen app for the sales centre, featuring a sleek and straightforward design enriched by playful animations, like content fade-ins and button hover effects, to engage users. The site is component-based, showcasing distinctive features such as a custom map on the Location page and seamless gallery animations on the Amenities page via GSAP. Additionally, the Floorplans page offers real-time unit availability, courtesy of an external API, integrated with an intuitive building selection tool.`,
+    shortDesc: 'Bold and bright website and touchscreen app.',
+    features: ['Bold & unique styles', 'API Integration', 'Touchscreen app'],
+    heroImage: require('src/assets/images/projects/locale/locale-1.png'),
+    images: [
+      require('src/assets/images/projects/locale/locale-2.png'),
+      {
+        src: require('src/assets/images/projects/locale/locale-home.mov'),
+        video: true,
+      },
+      {
+        src: require('src/assets/images/projects/locale/locale-gallery.mov'),
+        video: true,
+      },
+    ],
+    url: 'https://localerentals.ca/',
+  },
+  {
+    title: 'Gardena',
+    description: `Gardena's website features smooth scrolling animations, providing a visually appealing experience. I led the project alongside a two-member development team, focusing on designing the site's structure and animations using GSAP. We also integrated an external API to keep the floorplan information up-to-date. This practical and straightforward approach ensured the website is not only attractive but also functional.`,
+    shortDesc: 'Stunning smooth-scrolling website',
+    features: ['Website', 'GSAP Scroll Animations'],
+    heroImage: require('src/assets/images/projects/gardena/gardena-1.png'),
+    images: [require('src/assets/images/projects/gardena/gardena-2.png')],
+    url: 'https://intracorphomes.com/gardena/',
+  },
+  {
     title: '1818 Alberni',
     description:
       '1818 Alberni is a beautiful website to showcase a high end building in the heart of downtown Vancouver. It features smooth transitions to tie together the collage layout and subtle interactions for the user to enjoy. I also helped to create an iPad and TV app for the sales centre, where the iPad can be used as a standalone app or as a remote to display to the TV app. This is used as a helpful sales tool and a way to create more interaction between the user and the building.',
@@ -144,19 +181,19 @@ export default [
       require('src/assets/images/projects/raphael/raphael-5.png'),
     ],
   },
-  {
-    title: 'Precidia',
-    description:
-      'Precidia is a one-page teaser website to encourage the user to register and seek more information. It has beautiful loading animations, featuring handwritten text and smooth transitions. It is localized to three languages, and with a compelling UI it draws the user to register at the bottom of the site.',
-    shortDesc: 'Small teaser website with stand out animations.',
-    features: ['Website', 'SVG Animations'],
-    heroImage: require('src/assets/images/projects/precidia/precidia1.png'),
-    images: [
-      require('src/assets/images/projects/precidia/precidia2.png'),
-      require('src/assets/images/projects/precidia/precidia3.png'),
-    ],
-    url: 'https://precidiabyledmac.com/',
-  },
+  // {
+  //   title: 'Precidia',
+  //   description:
+  //     'Precidia is a one-page teaser website to encourage the user to register and seek more information. It has beautiful loading animations, featuring handwritten text and smooth transitions. It is localized to three languages, and with a compelling UI it draws the user to register at the bottom of the site.',
+  //   shortDesc: 'Small teaser website with stand out animations.',
+  //   features: ['Website', 'SVG Animations'],
+  //   heroImage: require('src/assets/images/projects/precidia/precidia1.png'),
+  //   images: [
+  //     require('src/assets/images/projects/precidia/precidia2.png'),
+  //     require('src/assets/images/projects/precidia/precidia3.png'),
+  //   ],
+  //   url: 'https://precidiabyledmac.com/',
+  // },
   {
     title: 'Smith & Farrow',
     description:
